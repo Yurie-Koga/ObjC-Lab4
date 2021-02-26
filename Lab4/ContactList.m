@@ -22,4 +22,12 @@
 - (void)addContact:(Contact *) newContact {
     [_contacts addObject:newContact];
 }
+
+- (void)displayContacts {
+    for (int i = 0; i < [_contacts count]; i++) {
+        Contact *c = [_contacts objectAtIndex:i];
+        NSLog(@"%d:<%@> (%@)", i, c.name, c.email);
+    }
+}
+
 @end
